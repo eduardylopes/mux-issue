@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-if="currentContent.type === 'video/mp4'" class="video">
+    <div v-if="currentContent.type === 'video/mp4'" class="video" ref="video">
       <video
         id="my-player"
         class="video-js vjs-16-9"
@@ -45,7 +45,8 @@ nav {
 }
 
 p {
-  flex: 1;
+  width: 100%;
+  display: flex;
   color: white;
   font-size: 10rem;
 }
