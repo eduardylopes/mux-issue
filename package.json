@@ -9,12 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mux/videojs-kit": "^0.11.1",
     "vue": "^3.2.41"
   },
   "devDependencies": {
+    "@mux/mux-player": "^1.2.0",
     "@vitejs/plugin-vue": "^3.2.0",
-    "vite": "^3.2.0",
-    "@mux/videojs-kit": "^0.11.1",
-    "@mux/mux-player": "^1.2.0"
+    "vite": "^3.2.0"
   }
 }
