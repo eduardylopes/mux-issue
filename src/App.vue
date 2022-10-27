@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <!-- <div v-if="currentContent.type === 'video/mp4'" class="video"> -->
-    <div v-if="show" class="video">
+    <div v-if="currentContent.type === 'video/mp4'" class="video">
       <video
         id="my-player"
         class="video-js vjs-16-9"
@@ -11,11 +10,9 @@
         height="100%"
       ></video>
     </div>
-    <p v-if="!show">TEXTO</p>
-    <!-- <p v-if="currentContent.type === 'text'">{{ currentContent.src }}</p> -->
+    <p v-if="currentContent.type === 'text'">{{ currentContent.src }}</p>
     <nav>
       <ul>
-        <li @click="showVideo()">Toggle</li>
         <li @click="getNextVideo(1, 'video/mp4')">Video 01</li>
         <li @click="getNextVideo(2, 'video/mp4')">Video 02</li>
         <li @click="getNextVideo(3, 'text')">Texto 01</li>
@@ -119,7 +116,6 @@ export default {
         type: 'video/mp4',
       },
       player: null,
-      show: true,
     };
   },
 
@@ -135,10 +131,6 @@ export default {
           type: this.currentContent.type,
         });
       }
-    },
-
-    showVideo() {
-      this.show = !this.show;
     },
   },
 };
